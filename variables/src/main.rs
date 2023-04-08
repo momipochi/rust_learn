@@ -9,6 +9,8 @@ fn main() {
         println!("I am: {number}");
     }
 
-    let s = "bal bla";
+    let mut s = "bal bla";
+    println!("{s}");
+    s="bbb";
     println!("{s}");
 }
