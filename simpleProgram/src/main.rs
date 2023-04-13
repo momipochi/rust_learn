@@ -6,7 +6,9 @@ fn main() {
 
     println!("Is prime: {:?}", is_prime(&11));
 
-    multiplication_table(&12)
+    multiplication_table(&12);
+
+    infinite_wave();
 }
 
 fn is_pandulum(s: &String) -> bool {
@@ -43,5 +45,18 @@ fn multiplication_table(n:&u32){
             print!("\t{:}",i*j)
         }
         println!()
+    }
+}
+
+fn infinite_wave(){
+    let mut n:f64 = 0.0;
+    loop {
+        let j = ((&n.sin()).to_radians()*1000.0_f64).round() as u32;
+        // print!("{j}");
+        for i in 0..j{
+            print!("*")
+        }
+        println!();
+        n+=0.1;
     }
 }
