@@ -5,6 +5,8 @@ fn main() {
     println!("Is pandulum: {is_pan}");
 
     println!("Is prime: {:?}", is_prime(&11));
+
+    multiplication_table(&12)
 }
 
 fn is_pandulum(s: &String) -> bool {
@@ -35,3 +37,11 @@ fn is_prime(n: &u32) -> bool {
     }
 }
 
+fn multiplication_table(n:&u32){
+    for i in 1..*n{
+        for j in 1..*n{
+            print!("\t{:}",i*j)
+        }
+        println!()
+    }
+}
