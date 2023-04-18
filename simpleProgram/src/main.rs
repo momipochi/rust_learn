@@ -25,6 +25,8 @@ fn main() {
     my_mod::print_hello();
 
     outermodule::outer_module::say_hello();
+
+    controller_function();x
 }
 
 fn is_pandulum(s: &String) -> bool {
@@ -71,4 +73,17 @@ fn infinite_wave() {
         println!();
         n += 0.1;
     }
+}
+
+fn controller_function() {
+    let mut n = sub_funciton_one(2);
+    let mut str = sub_funciton_two(String::from("What is up"));
+    println!("What do you think of {n} if I {str}")
+}
+
+fn sub_funciton_one(n: u32) -> u32 {
+    n * 2
+}
+fn sub_funciton_two(str: String) -> String {
+    str.chars().rev().collect()
 }
